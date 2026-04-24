@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drag Items</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/jvj7dsb.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- Webcam -->
+    <video id="video" autoplay playsinline></video>
+    <div id="tint"></div>
+
+    <!-- Connection lines overlay -->
+    <svg id="lines" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:2;pointer-events:none;"></svg>
+
+    <div class="box draggable" style="left:100px; top:100px;"><img style="width:30%;" src="./img/star.png"></div>
+    <div class="box draggable" style="left:400px; top:200px;"><img style="width:30%;" src="./img/star.png"></div>
+    <div class="box draggable" style="left:700px; top:300px;"><img style="width:30%;" src="./img/star.png"></div>
+    <div class="box draggable" style="left:300px; top:400px;"><img style="width:30%;" src="./img/star.png"></div>
+    <div class="box draggable" style="left:100px; top:300px;"><img style="width:30%;" src="./img/star.png"></div>  
+
+    <!-- Buttons -->
+    <div id="controls">
+      <button id="addBtn">Add Star</button>
+      <button id="removeBtn">Remove Star</button>
+      <button id="clearBtn">Clear Sky</button>
+      <button id="snapBtn">Capture Sky</button>
+    </div>
+
+    <!-- Constellation Information; coding assisted with W3Schools & Claude AI -->
+
+    <!-- Open/close button -->
+    <button id="panelOpen">★</button>
+
+    <div id="info-panel">
+      <div id="panel-header">
+        <span id="panel-label">Zodiac Constellations</span>
+        <button id="panelClose">✕</button>
+      </div>
+
+      <div id="img-wrap">
+        <div id="img-track">
+          <!-- slides generated in JS; Claude suggestion -->
+        </div>
+      </div>
+
+      <div id="img-nav">
+        <button id="prevBtn">&#8592;</button>
+        <span id="img-counter">1 / 12</span>
+        <button id="nextBtn">&#8594;</button>
+      </div>
+
+      <div id="img-info">
+        <p id="img-info-title"></p>
+        <p id="img-info-body"></p>
+      </div>
+    </div>
+
+
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

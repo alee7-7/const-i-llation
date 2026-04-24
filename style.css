@@ -1,0 +1,338 @@
+/* font: import ================================================ */
+@font-face {
+  font-family: 'variableFont';
+  src: url('./font/RobotoFlex.ttf') format('truetype');
+}
+
+
+/* Layout ================================================ */
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 1s ease-in-out;
+  /* background-color: #ff0000; */
+  /* background-image: url('./img/MultipleFormats.jpg'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Webcam ================================================ */
+video {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: scaleX(-1);
+  z-index: 1;
+}
+
+#tint {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 33, 83, 0.5);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* text ================================================ */
+.mainText1 {
+  color: blue;
+  font-size:400px !important;
+	font-variation-settings: "opsz" 144, "wght" 1000, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 96, "YOPQ" 79, "XTRA" 468, "YTUC" 712, "YTLC" 514, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+	/* font-variation-settings: "opsz" 14, "wght" 400, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 96, "YOPQ" 79, "XTRA" 468, "YTUC" 712, "YTLC" 514, "YTAS" 750, "YTDE" -203, "YTFI" 738; */
+  transition: font-variation-settings 1s ease-in-out;
+}
+
+/* Hands ================================================ */
+.handUI {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+  min-height: 100px;
+  padding: 10px;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  z-index: 2;
+  font-family: 'variableFont';
+  font-size: 100px;
+  font-variation-settings: "opsz" 14, "wght" 400, "GRAD" 0, "wdth" 100, "slnt" 0, "XOPQ" 96, "YOPQ" 79, "XTRA" 468, "YTUC" 712, "YTLC" 514, "YTAS" 750, "YTDE" -203, "YTFI" 738;
+  color: blue;
+}
+
+.handUI img {
+  width: 300px;
+  margin-bottom: 5px;
+}
+
+#left { 
+  border-color: cyan; 
+}
+
+#right { 
+  border-color: lime; 
+}
+
+
+/* Item ================================================ */
+.box {
+  position: absolute;
+  width: 100px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  z-index: 2;
+}
+
+.box img {
+  width: 30%;
+}
+
+/* Show ================================================ */
+#special {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  width: 100%;
+  font-family: 'variableFont';
+  font-size: 100px;
+  color: yellow;
+  text-align: center;
+  z-index: 3;
+}
+
+/* Buttons ============================================== */
+#controls {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+#controls button {
+  /* padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 2px solid white;
+  border-radius: 8px; */
+
+  text-decoration: none;
+  display: inline-block;
+
+  color: rgb(255, 253, 166);
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0);
+
+  padding: 0px 20px 5px 20px; 
+  border: 1.5px solid rgb(255, 253, 166);
+  border-radius: 40px;
+
+  font-family: "bomboniere", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#controls button a:hover{
+    background-color: rgb(255, 253, 166);
+    color: black;
+
+    font-family: "bomboniere", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Constellation Info Box ============================================== */
+#info-panel {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 260px;
+
+  background: rgb(11, 21, 61);
+  border: 1px solid rgb(255, 253, 166);
+  border-radius: 12px;
+
+  overflow: hidden;
+  z-index: 10;
+
+  color: rgb(255, 253, 166);
+  font-family: "bomboniere", sans-serif;
+  font-weight: 300;
+  font-style: normal;  
+}
+
+#img-wrap{
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+}
+
+#img-track{
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition code from W3Schools & adjusted */
+}
+
+#img-track .slide{
+  min-width: 260px;
+  height: 260px;
+  cursor: pointer;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#img-track .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+#img-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* border-top: 0.5px solid rgba(255, 253, 166, 0.2); */
+}
+
+#img-nav button {
+  background: none;
+  border: 1px solid rgba(255, 253, 166, 0.7);
+  color: rgb(255, 253, 166);
+  border-radius: 20px;
+  padding: 2px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "bomboniere", sans-serif;
+}
+
+#img-nav button:hover {
+  background: rgb(255, 253, 166);
+  color: rgb(28, 22, 60);
+}
+
+#img-counter {
+  font-size: 12px;
+}
+
+#img-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#img-info.open {
+  max-height: 200px;
+}
+
+#img-info-title {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 14px 4px;
+  border-top: 0.5px solid rgb(255, 253, 166);
+}
+
+#img-info-body {
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 0 14px 12px;
+}
+
+
+/* Panel toggle button ============================================== */
+/* Coding adjusted from and assisted by Claude */
+#panelOpen {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(11, 21, 61);
+  border: 1px solid rgb(255, 253, 166);
+  color: rgb(255, 253, 166);
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+}
+
+#panelOpen:hover {
+  background: rgba(255, 253, 166, 0.15);
+}
+
+#panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px 6px;
+  border-bottom: 0.5px solid rgba(255, 253, 166, 0.2);
+}
+
+#panel-label {
+  font-size: 17px;
+  letter-spacing: 0.08em;
+}
+
+#panelClose {
+  background: none;
+  border: none;
+  color: rgb(255, 253, 166);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  font-family: "bomboniere", sans-serif;
+}
+
+/* button animation */
+#info-panel {
+  transform-origin: top right;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+#info-panel.hidden {
+  transform: scale(0.05);
+  opacity: 0;
+  pointer-events: none;
+}
