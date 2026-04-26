@@ -87,18 +87,18 @@ panelToggleBtn.addEventListener("click", () => {
 
 // array format suggested by Claude + research for simplest code
 const slides = [
-  { src: "../img/const-1.png", title: "Aries - The Ram (Mar 21 - Apr 19)",        body: "Bold and ambitious, you love to be number one. You dive headfirst even into the most challenging situations and always come out on top." },
-  { src: "../img/const-2.png", title: "Taurus - The Bull (Apr 20 - May 20)",   body: "You enjoy relaxing in serene, calm environments surrounded by soft sounds and soothing aromas. You are practical and reliable." },
-  { src: "../img/const-3.png", title: "Gemini - The Twins (May 21 - Jun 21)",    body: "Spontaneous and playful is everything that comes from your curiousity-driven mind. You are always looking for something new and quick-witted." },
-  { src: "../img/const-4.png", title: "Cancer - The Crab (Jun 22 - Jul 22)",    body: "You're loyalty and protectiveness allows you to exist in both emotional and material realms. You're driven by high intuition to make decisions." },
-  { src: "../img/const-5.png", title: "Leo - The Lion (Jul 23 - Aug 22)",    body: "Passionate, loyal, and sometimes dramatic, you love to bask in the spotlight. Through your dominance, you also succeed with creativity." },
-  { src: "../img/const-6.png", title: "Virgo - The Virgin (Aug 23 - Sep 22)",    body: "You're very logical, practical, and systematic with your approach to life. Deeply routed in analytics, you are hardworking and consistently practice." },
-  { src: "../img/const-7.png", title: "Libra - The Balance (Sep 23 - Oct 23)",    body: "You thrive in balance, harmony, and justice. Your morals align with diplomacy and cooperation, and always establishing an equilibrium." },
-  { src: "../img/const-8.png", title: "Scorpio - The Scorpion (Oct 24 - Nov 21)",    body: "Using emotional energy as fuel, you cultivate powerful wisdom with passion and resource. Sometimes you come across as mysterious." },
-  { src: "../img/const-9.png", title: "Sagittarius - The Archer (Nov 22 - Dec 21)",    body: "You're always on a quest for knowledge. Chasing after physical and spiritual journeys, you're looking for a new adventure everyday." },
-  { src: "../img/const-10.png", title: "Capricorn - The Goat (Dec - Jan 19)",    body: "Time is what you control. Patience, perseverance, and dedication are your strong points as you navigate your material and emotional worlds." },
-  { src: "../img/const-11.png", title: "Aquarius - The Water Bearer (Jan 20 - Feb 18)",    body: "Innovative and progressive, you're always working to make the world a better place. Working independently and intellectually is where you thrive." },
-  { src: "../img/const-12.png", title: "Pisces - The Fish (Feb 19 - Mar 20)",    body: "You're intuitive, sensitive, and empathatetic, and that's where your creativity forms. You use art to travel between reality and fantasy." },
+  { src: "./img/const-1.png", title: "Aries - The Ram (Mar 21 - Apr 19)",        body: "Bold and ambitious, you love to be number one. You dive headfirst even into the most challenging situations and always come out on top." },
+  { src: "./img/const-2.png", title: "Taurus - The Bull (Apr 20 - May 20)",   body: "You enjoy relaxing in serene, calm environments surrounded by soft sounds and soothing aromas. You are practical and reliable." },
+  { src: "./img/const-3.png", title: "Gemini - The Twins (May 21 - Jun 21)",    body: "Spontaneous and playful is everything that comes from your curiousity-driven mind. You are always looking for something new and quick-witted." },
+  { src: "./img/const-4.png", title: "Cancer - The Crab (Jun 22 - Jul 22)",    body: "You're loyalty and protectiveness allows you to exist in both emotional and material realms. You're driven by high intuition to make decisions." },
+  { src: "./img/const-5.png", title: "Leo - The Lion (Jul 23 - Aug 22)",    body: "Passionate, loyal, and sometimes dramatic, you love to bask in the spotlight. Through your dominance, you also succeed with creativity." },
+  { src: "./img/const-6.png", title: "Virgo - The Virgin (Aug 23 - Sep 22)",    body: "You're very logical, practical, and systematic with your approach to life. Deeply routed in analytics, you are hardworking and consistently practice." },
+  { src: "./img/const-7.png", title: "Libra - The Balance (Sep 23 - Oct 23)",    body: "You thrive in balance, harmony, and justice. Your morals align with diplomacy and cooperation, and always establishing an equilibrium." },
+  { src: "./img/const-8.png", title: "Scorpio - The Scorpion (Oct 24 - Nov 21)",    body: "Using emotional energy as fuel, you cultivate powerful wisdom with passion and resource. Sometimes you come across as mysterious." },
+  { src: "./img/const-9.png", title: "Sagittarius - The Archer (Nov 22 - Dec 21)",    body: "You're always on a quest for knowledge. Chasing after physical and spiritual journeys, you're looking for a new adventure everyday." },
+  { src: "./img/const-10.png", title: "Capricorn - The Goat (Dec - Jan 19)",    body: "Time is what you control. Patience, perseverance, and dedication are your strong points as you navigate your material and emotional worlds." },
+  { src: "./img/const-11.png", title: "Aquarius - The Water Bearer (Jan 20 - Feb 18)",    body: "Innovative and progressive, you're always working to make the world a better place. Working independently and intellectually is where you thrive." },
+  { src: "./img/const-12.png", title: "Pisces - The Fish (Feb 19 - Mar 20)",    body: "You're intuitive, sensitive, and empathatetic, and that's where your creativity forms. You use art to travel between reality and fantasy." },
 ];
 
 let currentSlide = 0;
